@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+header {
+  display: inline-flexbox;
+  background-color: rgba(23, 22, 22, 1);
+  height: 8vh; /*vh de viewport height, 8 em relação ao tamanho da tela*/
+  width: 100%;
+  padding: 20px;
+  flex-wrap: wrap; /* este comando joga o item para baixo quando a tela fica pequena, faltava isso no meu projeto*/
+}
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.7; /*efeito ao passar o mouse por cima do item*/
+}
+nav {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+.nav-list {
+  display: inline-flex;
+  align-content: space-between;
+  list-style: none; /*para tirar o pontinho da lista*/
+}
+.main {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  display: inline-flex;
+  flex-direction: row; /*deixa um do lado do outro*/
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  margin-top: 200px;
+}
+
+.item img {
+  border-radius: 20px;
+  height: 350px;
+  width: 550px;
+  max-width: 550px;
+  max-height: 350px;
+}
+
+.nav-list li {
+  margin-left: 32px;
+}
+nav .logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  width: 67px;
+  height: 67px;
+  border-radius: 20px;
+}
+
+.item-descricao,
+a {
+  color: white;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+/* img {
+  width: 360px;
+  height: 240px;
+  border-radius: 15px;
+} */
+/* li a {
+  margin-left: 30px;
+} */
+
+.item {
+  align-items: center;
+}
+body {
+  background-color: rgba(52, 51, 51, 1);
+}
+p {
+  margin-top: 60px;
+}
