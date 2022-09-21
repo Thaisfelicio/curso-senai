@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+header {
+  display: inline-flexbox;
+  background-color: rgba(23, 22, 22, 1);
+  height: 7vh; /*vh de viewport height, 8 em relação ao tamanho da tela*/
+  width: 100%;
+  padding: 20px;
+  flex-wrap: wrap; /* este comando joga o item para baixo quando a tela fica pequena, faltava isso no meu projeto*/
+}
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.7; /*efeito ao passar o mouse por cima do item*/
+}
+nav {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between; /*alinha o conteudo*/
+  margin-right: 180px;
+}
+.nav-list {
+  display: inline-flex;
+  align-content: space-between;
+  list-style: none; /*para tirar o pontinho da lista*/
+}
