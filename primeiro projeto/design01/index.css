@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+header {
+  display: inline-flexbox;
+  background-color: rgba(23, 22, 22, 1);
+  height: 7vh; /*vh de viewport height, 8 em relação ao tamanho da tela*/
+  width: 100%;
+  padding: 20px;
+  flex-wrap: wrap; /* este comando joga o item para baixo quando a tela fica pequena, faltava isso no meu projeto*/
+}
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.7; /*efeito ao passar o mouse por cima do item*/
+}
+nav {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between; /*alinha o conteudo*/
+  margin-right: 180px;
+}
+.nav-list {
+  display: inline-flex;
+  align-content: space-between;
+  list-style: none; /*para tirar o pontinho da lista*/
+}
+.main {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  display: inline-flex;
+  flex-direction: row; /*deixa um do lado do outro*/
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  margin-top: 200px;
+  margin-left: 25px;
+}
+
+.item img {
+  border-radius: 20px;
+  height: 300px;
+  width: 500px;
+  max-width: 500px;
+  max-height: 300px;
+  margin-left: 20px;
+}
+
+.nav-list li {
+  margin-left: 40px;
+}
+nav .logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  width: 67px;
+  height: 67px;
+  border-radius: 20px;
+}
+
+.item-descricao,
+a {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.item {
+  align-items: center;
+  margin-right: 50px;
+}
+body {
+  background-color: rgba(52, 51, 51, 1);
+}
+p {
+  margin-top: 60px;
+  width: 500px;
+  margin-left: 40px;
+  text-align: justify;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#logotipo {
+  width: 90px;
+  height: 65px;
+  border-radius: 15px;
+  margin-right: 1100px;
+}

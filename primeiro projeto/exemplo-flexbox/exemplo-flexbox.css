@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+*:before, *:after{
+    box-sizing: inherit;/* herda de seu antecessor os atributos, como uma herança q herda os atributos de sua classe*/
+    
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;/* corta a imagem no tamanho da tela*/
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+.exemplo{
+    width: 100%;
+    max-width: 1200px;
+    height: 700px;
+    margin: 0 auto;/* auto para se configurar automaticamente em outras direções*/
+    flex-direction: column;
+}
+
+header, footer{
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2em;
+    background-color: coral;
+}
+.main{
+    display: flex;/*o torna flexivel, ele percebe que tem espaço para os lados na div e coloca os conteudos um do lado do outro, isso em qualquer variação do flex*/
+    height: 100%;
+    font-size: 2em;
+
+}
+
+nav, aside{
+    padding: 1em;
+}
+nav{
+    background-color: lightblue;
+}
+aside{
+    background-color: lightgreen;
+}
+
+.content{
+    background-color: orange;
+    padding: 1em;
+    order: -1;/*altera a ordem do conteudo, a div main estava no meio e foi um espaço para trás(-1), ficando na primeira posição*/
+}
+
+footer{
+    align-self: flex-end;
+    /* order: -1; */
+}
