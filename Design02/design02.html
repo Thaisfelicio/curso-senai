@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="design02.css" defer />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" /> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+      integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="design02.js" defer></script>
+    <title>Design 2?</title>
+  </head>
+  <body>
+    <header class="menu-principal">
+      <div class="header-1">
+        <div class="logo">
+          <a href="#">
+            <img src="" alt="" />
+          </a>
+        </div>
+        <ul class="redes-sociais">
+          <li>
+            <a href=""
+              ><img
+                src="https://img.icons8.com/color/48/000000/twitter-squared.png"
+            /></a>
+          </li>
+          <li>
+            <a href=""><img src="../imagens/icons8-linkedin-48.svg" /></a>
+          </li>
+          <li>
+            <a href=""><img src="../imagens/icons8-facebook-48.svg" /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com">
+              <img
+                src="../imagens/icons8-instagram-windows-11-color/icons8-instagram-48.svg"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="header-2">
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Páginas</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+        <div class="search_box">
+          <input type="text" placeholder="Procure por algo" />
+          <a href="#" class="btn">
+            <span class="material-symbols-sharp"> search </span>
+          </a>
+        </div>
+      </div>
+    </main>
+    <div class="slide-principal">
+      <div class="slides">
+        <div id="voltar" class="btn">
+          <span class="material-symbols-sharp"> chevron_left </span>
+        </div>
+        <div id="proximo" class="btn">
+          <span class="material-symbols-sharp"> chevron_right </span>
+        </div>
+        <div id="atual" class="images">
+          <img
+            src="../imagens/fanny-gustafsson-odkIlTbKddI-unsplash.jpg"
+            alt=""
+          />
+        </div>
+        <div class="images">
+          <img src="../imagens/julia-koizumi-K87TvPSCCgI-unsplash.jpg" alt="" />
+        </div>
+        <div class="images">
+          <img
+            src="../imagens/theo-crazzolara-mU-HLf41qhA-unsplash.jpg"
+            alt=""
+          />
+        </div>
+        <div class="dots">
+          <div class="active" id="0"></div>
+          <div id="1"></div>
+          <div id="2"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var dots = document.querySelector(".dots");
+      var quantidade = document.querySelectorAll(".slides .images");
+      var atual = 0;
+      var imagem = document.getElementById("atual");
+      var proximo = document.getElementById("proximo");
+      var voltar = document.getElementById("voltar");
+
+      for (let i = 0; i < quantidade.length; i++) {
+        var div = document.createElement("div");
+        div.id = i;
+        dots.appendChild(div);
+      }
+      document.getElementById("0").classList.add("imgAtual");
+      var pos = document.querySelectorAll(".dots div");
+      for (let i = 0; i < pos.length; i++) {
+        pos[i].addEventListener("click", () => {
+          atual = pos[i];
+          slide();
+        });
+      }
+      voltar.addEventListener("click", () => {
+        atual--;
+        slide();
+      });
+
+      proximo.addEventListener("click", () => {
+        atual++;
+        slide();
+      });
+
+      function slide() {
+        if (atual >= quantidade.length) {
+          atual = 0;
+        } else if (atual < 0) {
+          atual = quantidade.length;
+        }
+        document.querySelector(".imgAtual").classList.remove(".imgAtual");
+        imagem.style.marginLeft = -1204 * atual + "px";
+        document.getElementById("atual").classList.add("imgAtual");
+      }
+    </script>
+  </body>
+</html>
