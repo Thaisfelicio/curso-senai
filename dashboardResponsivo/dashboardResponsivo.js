@@ -82,7 +82,7 @@ Orders.forEach((order) => {
   table.appendChild(linha);
 });
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-let updates = document.querySelector(".recentCustomers");
+
 // let novoCliente = document.createElement("tr");
 // let celulaImagem = document.createElement("td");
 // let imagemPerfil = document.createElement("div");
@@ -91,21 +91,25 @@ let updates = document.querySelector(".recentCustomers");
 // updates.appendChild(novoCliente);
 // celulaImagem.appendChild(imagemPerfil);
 
-let clienteNovo = "<tr>" + "<td>" + "<div>" + "<img>";
+pedidosUpdate.forEach((pedido) =>{
+  // let updates = document.querySelector(".recentCustomers");
+  let tabela = document.querySelector(".recentCustomers table tbody");
+  let novaLinha = document.createElement("tr");
+  let clienteNovo = "<tr>" + "<td width= '60'>" + "<div class= 'imgBox'>" + "<img src'../imagens/daniel-deiev-97PYLquaudo-unsplash.jpg'>" +
 "</div>" +
-  "</td>" +
-  "<td>" +
-  "<p>" +
-  "<b>" +
-  "Fulano" +
-  "</b>" +
-  "Recebeu alguma coisa" +
-  "</p>" +
-  "<small>" +
-  "Há um tempo já" +
-  "</small>" +
-  "</td>" +
-  "</tr>";
+    "</td>" +
+      "<td class='message'>" +
+        "<p>" +
+          "<b>" +  pedido.clientName + "</b>" + " " +"recebeu o pedido número " +
+              pedido.orderNumber +
+        "</p>" +
+        "<small>" + "Há um tempo já" + "</small>" +
+      "</td>" +
+    "</tr>";
+    novaLinha.innerHTML = clienteNovo;
+  tabela.appendChild(novaLinha);
+})
+
 // ================================ RASCUNHO ================================//
 //   <tr>
 //     <td width="60">
