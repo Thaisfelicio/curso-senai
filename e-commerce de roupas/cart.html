@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Hora das Comprinhas</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#"><img src="img/logo.png" alt="" class="logo" /> </a>
+        <div>
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Loja</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
+            <li>
+              <a href="cart.html"><ion-icon name="bag-outline"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <section id="cart" class="product1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remover</td>
+                    <td>Pré-visualização</td>
+                    <td>Produto</td>
+                    <td>Preço</td>
+                    <td>Quantidade</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><ion-icon name="trash-outline"></ion-icon></a></td>
+                    <td><img src="img/products/f1.jpg" alt=""></td>
+                    <td>R$ 75,00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>R$ 75,00</td>                    
+                </tr>
+                <tr>
+                    <td><a href="#"><ion-icon name="trash-outline"></ion-icon></a></td>
+                    <td><img src="img/products/f2.jpg" alt=""></td>
+                    <td>R$ 75,00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>R$ 75,00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><ion-icon name="trash-outline"></ion-icon></a></td>
+                    <td><img src="img/products/f3.jpg" alt=""></td>
+                    <td>R$ 75,00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>R$ 75,00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><ion-icon name="trash-outline"></ion-icon></a></td>
+                    <td><img src="img/products/f4.jpg" alt=""></td>
+                    <td>R$ 75,00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>R$ 75,00</td>
+                </tr>
+            </tbody>
+        </table>
+      </section>
+      <section id="cart-add" class="product1">
+        <div id="coupon">
+            <h3>Aplicar cupom</h3>
+            <div>
+                <input type="text" placeholder="Insira o cupom">
+                <button  type="submit" class="normal">Aplicar</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Total do carrinho</h3>
+            <table>
+                <tr>
+                    <td>SubTotal Carrinho</td>
+                    <td>R$ 225</td>
+                </tr>
+                <tr>
+                    <td>Frete</td>
+                    <td>Gratuito</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>R$ 225,00</strong></td>
+                </tr>
+            </table>
+            <button type="submit" class="normal">Ir para checkout</button>
+        </div>
+      </section>
+      <footer class="product1">
+        <div class="col">
+          <img src="img/logo.png" alt="" />
+          <h4>Contato</h4>
+          <p>
+            <strong>Endereço:</strong>562 fim de mundo, Rua Sei lá onde,
+            Desconhecido
+          </p>
+          <p><strong>Telefone:</strong>+00 0000 001 / (+00) 00 0000 0000</p>
+          <p><strong>Horário:</strong>10:00 - 18:00. seg a sex</p>
+          <div class="follow">
+            <h4>Nos siga</h4>
+            <div class="icon">
+              <ion-icon name="logo-facebook"></ion-icon>
+              <ion-icon name="logo-twitter"></ion-icon>
+              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon name="logo-pinterest"></ion-icon>
+              <ion-icon name="logo-youtube"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Sobre</h4>
+          <a href="">Sobre nós</a>
+          <a href="">Informações sobre entrega</a>
+          <a href="">Politica de privacidade</a>
+          <a href="">Termos & condições</a>
+          <a href="">Entre em contato</a>
+        </div>
+        <div class="col">
+          <h4>Minha conta</h4>
+          <a href="">Sign in</a>
+          <a href="">Ver carrinho de compra</a>
+          <a href="">Minha lista de desejos</a>
+          <a href="">Rastrear meu pedido</a>
+          <a href="">Ajuda</a>
+        </div>
+        <div class="col install">
+          <h4>Instale o aplicativo</h4>
+          <p>Pela App Store ou Google play</p>
+          <div class="row">
+            <img src="img/pay/app.jpg" alt="" />
+            <img src="img/pay/play.jpg" alt="" />
+          </div>
+          <p>Formas seguras de pagamento</p>
+          <img src="img/pay/pay.png" alt="" />
+        </div>
+        <div class="copyright">
+          <p>© 2021. Tech2 etc - html css Ecommerce Template</p>
+        </div>
+      </footer>
+    </body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </html>
+  
