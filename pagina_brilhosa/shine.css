@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    
+    --color-primary: #05f2db;
+    --color-secondary: #f21db9;
+}
+@media screen and (min-width: 1200px){
+    main{
+        max-width: 1170px;
+    }
+    .concerts{
+        width: auto;
+    }
+}
+
+body{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    margin: auto;
+
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255,0)),url(img/ryan-hutton-Jztmx9yqjBw-unsplash.jpg);
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-size: 100% !important;
+    background-position: center top !important;
+    perspective: 700px;
+
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid #05f2db;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(95px) saturate(70%);
+
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+    1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+}
+main p{
+    font-size: 1.5rem;
+}
+@supports(-webkit-backdrop-filter: none) or (backdrop-filter: none){
+    main{
+        -webkit-backdrop-filter: blur(35px);
+        backdrop-filter: blur(35px);
+    }
+}
+.logo,
+.band-name,
+.headline{
+    align-content: center;
+    margin: 0;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #05ccfe, 0 0 0.3em #1f58f5;
+    margin-top: 20px;
+}
+.logo /*svg*/ img{
+    align-items: center;
+    align-content: center;
+    max-width: 500px;
+
+    fill: #05f2db;
+    stroke: 50px;
+    stroke: #05f2db;
+    animation-name: animate;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes animate {
+    0%{
+        filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #fff)
+        drop-shadow(0px 0px 10px #049dbf) drop-shadow(0px 0px 30px #04d9d9) drop-shadow(0px 0px 50px #05f2db);
+        fill: #05f2db;
+        stroke: #05f2db;
+    }
+    100%{
+        fill: #f21db9;
+        stroke: #f21db9;
+        filter: drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #fff)
+        drop-shadow(0px 0px 15px #401959) drop-shadow(0px 0px 40px #a974ff) drop-shadow(0px 0px 60px #7e00f5);
+    }
+}
+.concerts{
+    margin: 30px 0;
+    text-align: center;
+    width: 100%;
+}
+.concerts h2{
+    font-size: 3.5rem;
+    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+}
+
+.concerts table{
+    background: rgb(64, 25, 89);
+    border-radius: 10px;
+    padding: 35px 45px;
+    margin: 0 auto;
+    width: fit-content;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4.5px;
+    cursor: pointer;
+}
+.concerts th,
+.concerts td{
+    padding: 15px;
+    background-color: rgba(0, 149, 255,  0.2);
+    color: #fff;
+    font-size: 1em;
+}
+.concerts th{
+    text-align: left;
+}
+.concerts thead th{
+    background-color: #0d72ea;
+    font-size: 17px;
+}
+.concerts tbody tr:hover{
+    background-color: #f21db946;
+}
+.concerts button{
+    background-color: transparent;
+    color: #04d9d9;
+    border: 6px solid #04d9d9;
+    border-radius: 15px;
+    padding: 15px 25px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 15px #04d9d9) drop-shadow(0 0 50px #04d9d9)contrast(2) brightness(2);
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+.concerts button:hover{
+    color: black;
+    background-color: #05f2db;
+
+    animation-name: neon-btn;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes neon-btn {
+    0%{
+        filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 10px #049dbf)
+        drop-shadow(0px 0px 30px #04d9d9) drop-shadow(0px 0px 50px #05f2db);
+        fill: #05f2db;
+        stroke: #05f2db;
+    }
+    100%{
+        filter: drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #fff) drop-shadow(0px 0px 15px #049dbf)
+        drop-shadow(0px 0px 40px #04d9d9) drop-shadow(0px 0px 3px #05f2db) contrast(2) brightness(2);
+    }
+}
