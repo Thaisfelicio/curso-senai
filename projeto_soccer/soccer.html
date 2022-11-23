@@ -23,6 +23,7 @@
                     </ul>
                 </nav>
                 <img src="images/cart.png" alt="" width="30px" height="30px">
+                <img src="images/menu.png" alt="" class="menu-icon" onclick="menuToggle()">
             </div>
             <div class="row">
                 <div class="col-2">
@@ -276,7 +277,7 @@
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                     </div>
-                    <img src="images/user-4.png" alt="">
+                    <img src="images/user-2.png" alt="">
                     <h3>Sean Parker</h3>
                 </div>
 
@@ -316,7 +317,7 @@
                     <img src="images/play-store.png" alt="" class="app-logo">
                 </div>
                 <div class="footer-col-2">
-                    <img src="images/logo-white" alt="">
+                    <img src="images/logo-white.png" alt="">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis sequi, eaque esse aspernatur similique consectetur sit eveniet tempore quisquam minus tenetur repellat assumenda quae omnis, vitae a? Iure, est perferendis?</p>
                 </div>
                 <div class="footer-col-3">
@@ -344,6 +345,19 @@
             </p>
         </div>
     </div>
+    <!-- JS for Toggle menu -->
+    <script type="text/javascript">
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menuToggle(argument){
+            if(MenuItems.style.maxHeight = "0px"){
+                MenuItems.style.maxHeight = "200px";
+            }
+            else{
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
